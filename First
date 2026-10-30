@@ -1,0 +1,67 @@
+import java.util.Scanner;
+
+public class First {
+    public static void main(String[] args) {
+
+Scanner scanner = new Scanner(System.in);
+Boolean tf = true;
+int inputa = 0;
+
+
+do{
+System.out.print("Input number more than 1 and less than 10 : ");
+inputa = scanner.nextInt();
+
+if(inputa < 10 && inputa > 1) {
+tf = true;
+}else{
+System.out.println(">>> Error – invalid input, try again");
+tf = false;
+}
+}while(!tf);
+
+System.out.println("Vaild number");
+
+
+int go = 0;
+int sum = inputa;
+int blank = sum;
+int count = 0;
+
+for(int i = 1; i <= inputa; i++){
+System.out.print(i + " ");
+
+go = i * i;
+if(go >= 10){
+    System.out.print(go + " ");
+}else{
+    System.out.print(" " + go + " ");
+}
+
+do{
+   count++;
+   blank = blank/10;
+   
+
+}while(blank >= 9);
+
+
+
+for(int l = 0; l < 10 - count; l++){
+System.out.print(" ");
+}
+System.out.println(sum + " ");
+ sum = sum * inputa;
+
+
+
+}
+
+
+
+
+
+
+
+}
+}
